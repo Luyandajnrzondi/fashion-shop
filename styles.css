@@ -285,7 +285,7 @@ header {
 
 .musthave__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
 }
 
@@ -306,20 +306,17 @@ header {
 }
 
 .musthave__card img {
-  width: 100%; /* Ensure the image takes up the full width of the container */
-  height: 300px; /* Set a fixed height for consistency */
-  object-fit: cover; /* Ensures the image fills the container without distortion */
-  border-radius: 10px; /* Optional: Adds rounded corners */
-  margin-bottom: 1rem; /* Adds spacing below the image */
+  border-radius: 10px;
+  margin-bottom: 1rem;
 }
 
 .musthave__card h4 {
-  font-size: 1.2rem; /* Larger text */
+  font-size: 1rem;
   font-weight: 600;
 }
 
 .musthave__card p {
-  font-size: 1rem; /* Larger text */
+  font-size: 0.9rem;
   font-weight: 500;
   margin-bottom: 1rem;
 }
@@ -329,4 +326,244 @@ header {
   color: var(--text-light);
 }
 
-/* Rest of the CSS remains the same */
+/* News Section */
+.news {
+  background-color: var(--extra-light);
+}
+
+.news__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.news__details {
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  text-align: center;
+}
+
+.news__details p {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.news__details p i {
+  font-size: 0.5rem;
+  color: var(--text-light);
+  padding: 0.5rem;
+}
+
+.news__details p span {
+  font-weight: 600;
+}
+
+.news__details h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.news__details a i {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+.news__details a:hover i {
+  color: var(--text-dark);
+}
+
+/* Brands Section */
+.brands__container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+}
+
+.brand__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.brand__image img {
+  max-width: 120px;
+}
+
+.brand__image:hover {
+  opacity: 1;
+}
+
+/* Footer Section */
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.footer__heading {
+  color: var(--text-light);
+  font-size: 1rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.footer__heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 50px;
+  background-color: var(--text-light);
+}
+
+.footer__col p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer__col p:hover {
+  color: var(--text-dark);
+}
+
+.footer__col p i {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.instagram__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.footer__bar {
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+.footer__form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.footer__form form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.footer__form input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--text-dark);
+  font-size: 0.8rem;
+}
+
+.footer__form .btn {
+  background-color: var(--text-dark);
+  color: var(--white);
+}
+
+/* Media Queries */
+@media (width < 900px) {
+  header {
+    margin-top: 5rem;
+  }
+
+  .sale__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .musthave__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .news__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .brands__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .instagram__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__bar {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .copyright {
+    text-align: center;
+  }
+
+  .footer__form {
+    justify-content: center;
+  }
+}
+
+@media (width < 600px) {
+  .nav__links {
+    display: none;
+  }
+
+  header {
+    margin-top: 0;
+  }
+
+  .header__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .header__image {
+    display: none;
+  }
+
+  .sale__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .musthave__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .news__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .brands__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
